@@ -16,32 +16,38 @@ namespace hive {
 
 class Semaphore {
 public:
-    Semaphore (int count_ = 0)
-        : count(count_) {}
+    Semaphore (int count = 0)
+        : m_count(count) {}
 
-    inline void notify()
+    inline void Notify()
     {
-        std::unique_lock<std::mutex> lock(mtx);
-        count++;
-        cv.notify_one();
+        std::unique_lock<std::mutex> lock(m_mutex);
+        m_count++;
+        m_cv.notify_one();
     }
 
-    inline void wait(bool decreatement)
+    inline void Wait(bool decreatement)
     {
-        std::unique_lock<std::mutex> lock(mtx);
+        std::unique_lock<std::mutex> lock(m_mutex);
 
-        while(count == 0){
-            cv.wait(lock);
+        while(m_count == 0){
+            m_cv.wait(lock);
         }
         if (decreatement) {
-            count--;
+            m_count--;
         }
+    }
+    
+    inline void Reset()
+    {
+        std::unique_lock<std::mutex> lock(m_mutex);
+        m_count = 0;
     }
 
 private:
-    std::mutex mtx;
-    std::condition_variable cv;
-    int count;
+    std::mutex m_mutex;
+    std::condition_variable m_cv;
+    int m_count;
 };
 
 };

@@ -32,4 +32,14 @@
 #define OS_POSIX 1
 #endif
 
+
+#if defined(COMPILER_GCC) || defined(__clang__)
+#define WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+#else
+#define WARN_UNUSED_RESULT
+#endif
+
+
+#define NOINLINE __attribute__((noinline))
+
 #endif /* build_config_h */

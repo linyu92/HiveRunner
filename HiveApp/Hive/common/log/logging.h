@@ -15,6 +15,8 @@
 #include "build/base_export.h"
 
 
+
+
 namespace hive {
 
 typedef int LogSeverity;
@@ -76,6 +78,7 @@ BASE_EXPORT void SetLogPrefix(const char* prefix);
     #define DCHECK(condition)
 
 #endif /* DCHECK_IS_ON */
+
 
 class BASE_EXPORT LogMessage {
 public:

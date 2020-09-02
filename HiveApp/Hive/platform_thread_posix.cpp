@@ -173,5 +173,12 @@ bool PlatformThread::CreateWithPriority(size_t stack_size,
                         thread_handle, priority);
 }
 
+// static
+void PlatformThread::Join(PlatformThreadHandle thread_handle) {
+    pthread_join(thread_handle.platform_handle(), nullptr);
+//  CHECK_EQ(0, );
+}
+
+
 
 }; // hive

@@ -10,7 +10,7 @@
 #define platform_thread_hpp
 
 #include "build/base_export.h"
-#include "common/logging.h"
+#include "common/log/logging.h"
 
 #if defined(OS_WIN)
 #include "win/windows_types.h"
@@ -93,6 +93,8 @@ public:
                                    Delegate* delegate,
                                    PlatformThreadHandle* thread_handle,
                                    ThreadPriority priority);
+    
+    static void Join(PlatformThreadHandle thread_handle);
     
     static void SetCurrentThreadPriority(ThreadPriority priority);
     

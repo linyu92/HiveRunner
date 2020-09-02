@@ -7,7 +7,7 @@
 //
 
 #include "thread_id_name_manager.h"
-#include "common/logging.h"
+#include "common/log/logging.h"
 
 namespace hive {
 namespace {

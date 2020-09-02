@@ -7,22 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB9E20D624E546CC00E48663 /* Hive.h in Headers */ = {isa = PBXBuildFile; fileRef = DB9E20D424E546CC00E48663 /* Hive.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB9E20DF24E5475C00E48663 /* thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB9E20DD24E5475C00E48663 /* thread.cpp */; };
-		DB9E20E024E5475C00E48663 /* thread.h in Headers */ = {isa = PBXBuildFile; fileRef = DB9E20DE24E5475C00E48663 /* thread.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB9E20E524E62D3300E48663 /* platform_thread.h in Headers */ = {isa = PBXBuildFile; fileRef = DB9E20E324E62D3300E48663 /* platform_thread.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB9E20E624E62D3300E48663 /* platform_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB9E20E424E62D3300E48663 /* platform_thread.cpp */; };
+		DB87718224F9F9F000E00B3C /* thread_controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB87718124F9F9F000E00B3C /* thread_controller.cpp */; };
+		DB87718524FA41D900E00B3C /* task_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB87718424FA41D900E00B3C /* task_manager.cpp */; };
+		DB87718824FB949100E00B3C /* message_pump.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB87718724FB949100E00B3C /* message_pump.cpp */; };
+		DB87718B24FBEA9D00E00B3C /* MessagePumpCFRunLoop.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB87718A24FBEA9D00E00B3C /* MessagePumpCFRunLoop.mm */; };
+		DB87718E24FDF1AF00E00B3C /* MessagePumpCFRunLoopBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB87718D24FDF1AF00E00B3C /* MessagePumpCFRunLoopBase.mm */; };
+		DB87719124FE5AAF00E00B3C /* PendingTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB87719024FE5AAF00E00B3C /* PendingTask.cpp */; };
+		DB87719424FF376D00E00B3C /* Location.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB87719324FF376D00E00B3C /* Location.cpp */; };
 		DB9E210624E6916C00E48663 /* HiveTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB9E210524E6916C00E48663 /* HiveTests.mm */; };
 		DB9E210824E6916C00E48663 /* Hive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9E20D124E546CC00E48663 /* Hive.framework */; };
-		DB9E210E24E6919F00E48663 /* build_config.h in Headers */ = {isa = PBXBuildFile; fileRef = DB9E20FE24E6879200E48663 /* build_config.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB9E210F24E691A500E48663 /* base_export.h in Headers */ = {isa = PBXBuildFile; fileRef = DB9E20E224E5486A00E48663 /* base_export.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB9E211824E6978100E48663 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9E211724E6978100E48663 /* AppDelegate.m */; };
 		DB9E211B24E6978100E48663 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9E211A24E6978100E48663 /* SceneDelegate.m */; };
-		DB9E211E24E6978100E48663 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9E211D24E6978100E48663 /* ViewController.m */; };
 		DB9E212124E6978100E48663 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9E211F24E6978100E48663 /* Main.storyboard */; };
 		DB9E212324E6978300E48663 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9E212224E6978300E48663 /* Assets.xcassets */; };
 		DB9E212624E6978300E48663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9E212424E6978300E48663 /* LaunchScreen.storyboard */; };
 		DB9E212924E6978300E48663 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9E212824E6978300E48663 /* main.m */; };
+		DB9E21E624EE86AA00E48663 /* thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB9E21CF24EE86AA00E48663 /* thread.cpp */; };
+		DB9E21E724EE86AA00E48663 /* platform_thread_posix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB9E21D124EE86AA00E48663 /* platform_thread_posix.cpp */; };
+		DB9E21E824EE86AA00E48663 /* thread_id_name_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB9E21D224EE86AA00E48663 /* thread_id_name_manager.cpp */; };
+		DB9E21E924EE86AA00E48663 /* platform_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB9E21D424EE86AA00E48663 /* platform_thread.cpp */; };
+		DB9E21EA24EE86AA00E48663 /* platform_thread_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB9E21D624EE86AA00E48663 /* platform_thread_mac.mm */; };
+		DB9E21EB24EE86AA00E48663 /* logging.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB9E21DA24EE86AA00E48663 /* logging.cpp */; };
+		DB9E21EC24EE86AA00E48663 /* string_piece.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB9E21DD24EE86AA00E48663 /* string_piece.cpp */; };
+		DB9E21EF24EE86E600E48663 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = DB9E21EE24EE86E600E48663 /* ViewController.mm */; };
+		DB9E21F224EE88A400E48663 /* run_loop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB9E21F124EE88A400E48663 /* run_loop.cpp */; };
+		DB9E223524F36B1B00E48663 /* time_override.cc in Sources */ = {isa = PBXBuildFile; fileRef = DB9E222824F36B1A00E48663 /* time_override.cc */; };
+		DB9E223624F36B1B00E48663 /* time_to_iso8601.cc in Sources */ = {isa = PBXBuildFile; fileRef = DB9E222924F36B1A00E48663 /* time_to_iso8601.cc */; };
+		DB9E223924F36B1B00E48663 /* time_conversion_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = DB9E222D24F36B1B00E48663 /* time_conversion_posix.cc */; };
+		DB9E223C24F36B1B00E48663 /* time_mac.cc in Sources */ = {isa = PBXBuildFile; fileRef = DB9E223324F36B1B00E48663 /* time_mac.cc */; };
+		DB9E223F24F36B5A00E48663 /* time_delta.cc in Sources */ = {isa = PBXBuildFile; fileRef = DB9E223D24F36B5A00E48663 /* time_delta.cc */; };
+		DB9E224524F3A3BE00E48663 /* scoped_typeref.h in Headers */ = {isa = PBXBuildFile; fileRef = DB9E224424F3A3BE00E48663 /* scoped_typeref.h */; };
+		DB9E224724F3A3C700E48663 /* scoped_policy.h in Headers */ = {isa = PBXBuildFile; fileRef = DB9E224624F3A3C700E48663 /* scoped_policy.h */; };
+		DB9E224C24F3B42400E48663 /* no_destructor.h in Headers */ = {isa = PBXBuildFile; fileRef = DB9E224B24F3B42400E48663 /* no_destructor.h */; };
+		DB9E225024F3CB5000E48663 /* task_queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DB9E224F24F3CB5000E48663 /* task_queue.cpp */; };
+		DBEAD2F324F4ED3E00D6721F /* task_queue_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBEAD2F224F4ED3E00D6721F /* task_queue_impl.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,15 +54,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB87718024F9F9F000E00B3C /* thread_controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = thread_controller.h; sourceTree = "<group>"; };
+		DB87718124F9F9F000E00B3C /* thread_controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = thread_controller.cpp; sourceTree = "<group>"; };
+		DB87718324FA41D900E00B3C /* task_manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = task_manager.h; sourceTree = "<group>"; };
+		DB87718424FA41D900E00B3C /* task_manager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = task_manager.cpp; sourceTree = "<group>"; };
+		DB87718624FB949100E00B3C /* message_pump.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = message_pump.h; sourceTree = "<group>"; };
+		DB87718724FB949100E00B3C /* message_pump.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = message_pump.cpp; sourceTree = "<group>"; };
+		DB87718924FBEA9D00E00B3C /* MessagePumpCFRunLoop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagePumpCFRunLoop.h; sourceTree = "<group>"; };
+		DB87718A24FBEA9D00E00B3C /* MessagePumpCFRunLoop.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MessagePumpCFRunLoop.mm; sourceTree = "<group>"; };
+		DB87718C24FDF1AF00E00B3C /* MessagePumpCFRunLoopBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessagePumpCFRunLoopBase.h; sourceTree = "<group>"; };
+		DB87718D24FDF1AF00E00B3C /* MessagePumpCFRunLoopBase.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MessagePumpCFRunLoopBase.mm; sourceTree = "<group>"; };
+		DB87718F24FE5AAF00E00B3C /* PendingTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PendingTask.h; sourceTree = "<group>"; };
+		DB87719024FE5AAF00E00B3C /* PendingTask.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PendingTask.cpp; sourceTree = "<group>"; };
+		DB87719224FF376D00E00B3C /* Location.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		DB87719324FF376D00E00B3C /* Location.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Location.cpp; sourceTree = "<group>"; };
 		DB9E20D124E546CC00E48663 /* Hive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Hive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB9E20D424E546CC00E48663 /* Hive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hive.h; sourceTree = "<group>"; };
-		DB9E20D524E546CC00E48663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB9E20DD24E5475C00E48663 /* thread.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = thread.cpp; sourceTree = "<group>"; };
-		DB9E20DE24E5475C00E48663 /* thread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = thread.h; sourceTree = "<group>"; };
-		DB9E20E224E5486A00E48663 /* base_export.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = base_export.h; sourceTree = "<group>"; };
-		DB9E20E324E62D3300E48663 /* platform_thread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = platform_thread.h; sourceTree = "<group>"; };
-		DB9E20E424E62D3300E48663 /* platform_thread.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = platform_thread.cpp; sourceTree = "<group>"; };
-		DB9E20FE24E6879200E48663 /* build_config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = build_config.h; sourceTree = "<group>"; };
 		DB9E210324E6916B00E48663 /* HiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9E210524E6916C00E48663 /* HiveTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HiveTests.mm; sourceTree = "<group>"; };
 		DB9E210724E6916C00E48663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,12 +78,69 @@
 		DB9E211924E6978100E48663 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		DB9E211A24E6978100E48663 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		DB9E211C24E6978100E48663 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DB9E211D24E6978100E48663 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DB9E212024E6978100E48663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB9E212224E6978300E48663 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB9E212524E6978300E48663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB9E212724E6978300E48663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB9E212824E6978300E48663 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DB9E21CF24EE86AA00E48663 /* thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = thread.cpp; sourceTree = "<group>"; };
+		DB9E21D124EE86AA00E48663 /* platform_thread_posix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = platform_thread_posix.cpp; sourceTree = "<group>"; };
+		DB9E21D224EE86AA00E48663 /* thread_id_name_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = thread_id_name_manager.cpp; sourceTree = "<group>"; };
+		DB9E21D324EE86AA00E48663 /* Hive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hive.h; sourceTree = "<group>"; };
+		DB9E21D424EE86AA00E48663 /* platform_thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = platform_thread.cpp; sourceTree = "<group>"; };
+		DB9E21D624EE86AA00E48663 /* platform_thread_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = platform_thread_mac.mm; sourceTree = "<group>"; };
+		DB9E21D724EE86AA00E48663 /* thread_id_name_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thread_id_name_manager.h; sourceTree = "<group>"; };
+		DB9E21D924EE86AA00E48663 /* semaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = semaphore.h; sourceTree = "<group>"; };
+		DB9E21DA24EE86AA00E48663 /* logging.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = logging.cpp; sourceTree = "<group>"; };
+		DB9E21DB24EE86AA00E48663 /* string_piece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = string_piece.h; sourceTree = "<group>"; };
+		DB9E21DC24EE86AA00E48663 /* logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logging.h; sourceTree = "<group>"; };
+		DB9E21DD24EE86AA00E48663 /* string_piece.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = string_piece.cpp; sourceTree = "<group>"; };
+		DB9E21DE24EE86AA00E48663 /* thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thread.h; sourceTree = "<group>"; };
+		DB9E21E024EE86AA00E48663 /* platform_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform_thread.h; sourceTree = "<group>"; };
+		DB9E21E324EE86AA00E48663 /* build_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = build_config.h; sourceTree = "<group>"; };
+		DB9E21E424EE86AA00E48663 /* base_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base_export.h; sourceTree = "<group>"; };
+		DB9E21EE24EE86E600E48663 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		DB9E21F024EE88A400E48663 /* run_loop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = run_loop.h; sourceTree = "<group>"; };
+		DB9E21F124EE88A400E48663 /* run_loop.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = run_loop.cpp; sourceTree = "<group>"; };
+		DB9E21F424EF634F00E48663 /* callback_forward.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = callback_forward.h; sourceTree = "<group>"; };
+		DB9E221424F366F100E48663 /* clamped_math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clamped_math.h; sourceTree = "<group>"; };
+		DB9E221524F366F100E48663 /* ranges.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ranges.h; sourceTree = "<group>"; };
+		DB9E221624F366F100E48663 /* math_constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = math_constants.h; sourceTree = "<group>"; };
+		DB9E221724F366F100E48663 /* safe_math_clang_gcc_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safe_math_clang_gcc_impl.h; sourceTree = "<group>"; };
+		DB9E221824F366F100E48663 /* safe_conversions_arm_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safe_conversions_arm_impl.h; sourceTree = "<group>"; };
+		DB9E221924F366F100E48663 /* checked_math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checked_math.h; sourceTree = "<group>"; };
+		DB9E221A24F366F100E48663 /* safe_math_arm_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safe_math_arm_impl.h; sourceTree = "<group>"; };
+		DB9E221B24F366F100E48663 /* clamped_math_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clamped_math_impl.h; sourceTree = "<group>"; };
+		DB9E221C24F366F100E48663 /* safe_conversions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safe_conversions.h; sourceTree = "<group>"; };
+		DB9E221D24F366F100E48663 /* checked_math_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checked_math_impl.h; sourceTree = "<group>"; };
+		DB9E221E24F366F100E48663 /* safe_math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safe_math.h; sourceTree = "<group>"; };
+		DB9E221F24F366F100E48663 /* safe_conversions_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safe_conversions_impl.h; sourceTree = "<group>"; };
+		DB9E222024F366F100E48663 /* safe_math_shared_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safe_math_shared_impl.h; sourceTree = "<group>"; };
+		DB9E222424F36B1A00E48663 /* default_tick_clock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = default_tick_clock.h; path = ../default_tick_clock.h; sourceTree = "<group>"; };
+		DB9E222524F36B1A00E48663 /* clock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = clock.h; path = ../clock.h; sourceTree = "<group>"; };
+		DB9E222624F36B1A00E48663 /* default_clock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = default_clock.h; path = ../default_clock.h; sourceTree = "<group>"; };
+		DB9E222724F36B1A00E48663 /* default_tick_clock.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = default_tick_clock.cc; path = ../default_tick_clock.cc; sourceTree = "<group>"; };
+		DB9E222824F36B1A00E48663 /* time_override.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = time_override.cc; sourceTree = "<group>"; };
+		DB9E222924F36B1A00E48663 /* time_to_iso8601.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = time_to_iso8601.cc; sourceTree = "<group>"; };
+		DB9E222A24F36B1A00E48663 /* tick_clock.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tick_clock.cc; path = ../tick_clock.cc; sourceTree = "<group>"; };
+		DB9E222B24F36B1A00E48663 /* time_to_iso8601.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time_to_iso8601.h; sourceTree = "<group>"; };
+		DB9E222C24F36B1A00E48663 /* default_clock.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = default_clock.cc; path = ../default_clock.cc; sourceTree = "<group>"; };
+		DB9E222D24F36B1B00E48663 /* time_conversion_posix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = time_conversion_posix.cc; sourceTree = "<group>"; };
+		DB9E222E24F36B1B00E48663 /* tick_clock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tick_clock.h; path = ../tick_clock.h; sourceTree = "<group>"; };
+		DB9E223024F36B1B00E48663 /* clock.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = clock.cc; path = ../clock.cc; sourceTree = "<group>"; };
+		DB9E223224F36B1B00E48663 /* time_override.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time_override.h; sourceTree = "<group>"; };
+		DB9E223324F36B1B00E48663 /* time_mac.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = time_mac.cc; path = ../time_mac.cc; sourceTree = "<group>"; };
+		DB9E223D24F36B5A00E48663 /* time_delta.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = time_delta.cc; sourceTree = "<group>"; };
+		DB9E223E24F36B5A00E48663 /* time_delta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time_delta.h; sourceTree = "<group>"; };
+		DB9E224024F36FF800E48663 /* string_format.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = string_format.h; sourceTree = "<group>"; };
+		DB9E224324F3A3A800E48663 /* scoped_cftyperef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoped_cftyperef.h; sourceTree = "<group>"; };
+		DB9E224424F3A3BE00E48663 /* scoped_typeref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoped_typeref.h; sourceTree = "<group>"; };
+		DB9E224624F3A3C700E48663 /* scoped_policy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoped_policy.h; sourceTree = "<group>"; };
+		DB9E224B24F3B42400E48663 /* no_destructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = no_destructor.h; sourceTree = "<group>"; };
+		DB9E224E24F3CB5000E48663 /* task_queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = task_queue.h; sourceTree = "<group>"; };
+		DB9E224F24F3CB5000E48663 /* task_queue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = task_queue.cpp; sourceTree = "<group>"; };
+		DBEAD2F124F4ED3E00D6721F /* task_queue_impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = task_queue_impl.h; sourceTree = "<group>"; };
+		DBEAD2F224F4ED3E00D6721F /* task_queue_impl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = task_queue_impl.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,21 +188,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DB9E20D324E546CC00E48663 /* Hive */ = {
-			isa = PBXGroup;
-			children = (
-				DB9E20E224E5486A00E48663 /* base_export.h */,
-				DB9E20FE24E6879200E48663 /* build_config.h */,
-				DB9E20DE24E5475C00E48663 /* thread.h */,
-				DB9E20DD24E5475C00E48663 /* thread.cpp */,
-				DB9E20E324E62D3300E48663 /* platform_thread.h */,
-				DB9E20E424E62D3300E48663 /* platform_thread.cpp */,
-				DB9E20D424E546CC00E48663 /* Hive.h */,
-				DB9E20D524E546CC00E48663 /* Info.plist */,
-			);
-			path = Hive;
-			sourceTree = "<group>";
-		};
 		DB9E210424E6916B00E48663 /* HiveTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,13 +200,13 @@
 		DB9E211524E6978100E48663 /* HiveApp */ = {
 			isa = PBXGroup;
 			children = (
-				DB9E20D324E546CC00E48663 /* Hive */,
+				DB9E21CE24EE86AA00E48663 /* Hive */,
 				DB9E211624E6978100E48663 /* AppDelegate.h */,
 				DB9E211724E6978100E48663 /* AppDelegate.m */,
 				DB9E211924E6978100E48663 /* SceneDelegate.h */,
 				DB9E211A24E6978100E48663 /* SceneDelegate.m */,
 				DB9E211C24E6978100E48663 /* ViewController.h */,
-				DB9E211D24E6978100E48663 /* ViewController.m */,
+				DB9E21EE24EE86E600E48663 /* ViewController.mm */,
 				DB9E211F24E6978100E48663 /* Main.storyboard */,
 				DB9E212224E6978300E48663 /* Assets.xcassets */,
 				DB9E212424E6978300E48663 /* LaunchScreen.storyboard */,
@@ -150,6 +216,180 @@
 			path = HiveApp;
 			sourceTree = "<group>";
 		};
+		DB9E21CE24EE86AA00E48663 /* Hive */ = {
+			isa = PBXGroup;
+			children = (
+				DB9E21F324EF633700E48663 /* task */,
+				DB9E21DE24EE86AA00E48663 /* thread.h */,
+				DB9E21CF24EE86AA00E48663 /* thread.cpp */,
+				DB9E21D124EE86AA00E48663 /* platform_thread_posix.cpp */,
+				DB9E21D724EE86AA00E48663 /* thread_id_name_manager.h */,
+				DB9E21D224EE86AA00E48663 /* thread_id_name_manager.cpp */,
+				DB9E21D324EE86AA00E48663 /* Hive.h */,
+				DB9E21D424EE86AA00E48663 /* platform_thread.cpp */,
+				DB9E21D524EE86AA00E48663 /* mac */,
+				DB9E21D824EE86AA00E48663 /* common */,
+				DB9E21E024EE86AA00E48663 /* platform_thread.h */,
+				DB9E21E224EE86AA00E48663 /* build */,
+				DB9E21F024EE88A400E48663 /* run_loop.h */,
+				DB9E21F124EE88A400E48663 /* run_loop.cpp */,
+				DB87718024F9F9F000E00B3C /* thread_controller.h */,
+				DB87718124F9F9F000E00B3C /* thread_controller.cpp */,
+				DB87718624FB949100E00B3C /* message_pump.h */,
+				DB87718724FB949100E00B3C /* message_pump.cpp */,
+			);
+			path = Hive;
+			sourceTree = "<group>";
+		};
+		DB9E21D524EE86AA00E48663 /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				DB9E21D624EE86AA00E48663 /* platform_thread_mac.mm */,
+				DB87718924FBEA9D00E00B3C /* MessagePumpCFRunLoop.h */,
+				DB87718A24FBEA9D00E00B3C /* MessagePumpCFRunLoop.mm */,
+				DB87718C24FDF1AF00E00B3C /* MessagePumpCFRunLoopBase.h */,
+				DB87718D24FDF1AF00E00B3C /* MessagePumpCFRunLoopBase.mm */,
+			);
+			path = mac;
+			sourceTree = "<group>";
+		};
+		DB9E21D824EE86AA00E48663 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				DB9E224824F3A3FC00E48663 /* memory */,
+				DB9E222324F36AFE00E48663 /* time */,
+				DB9E222224F3670600E48663 /* string */,
+				DB9E222124F366F700E48663 /* log */,
+				DB9E221324F366F100E48663 /* numerics */,
+				DB9E21D924EE86AA00E48663 /* semaphore.h */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		DB9E21E224EE86AA00E48663 /* build */ = {
+			isa = PBXGroup;
+			children = (
+				DB9E21E324EE86AA00E48663 /* build_config.h */,
+				DB9E21E424EE86AA00E48663 /* base_export.h */,
+			);
+			path = build;
+			sourceTree = "<group>";
+		};
+		DB9E21F324EF633700E48663 /* task */ = {
+			isa = PBXGroup;
+			children = (
+				DB9E21F424EF634F00E48663 /* callback_forward.h */,
+				DB9E224E24F3CB5000E48663 /* task_queue.h */,
+				DB9E224F24F3CB5000E48663 /* task_queue.cpp */,
+				DBEAD2F124F4ED3E00D6721F /* task_queue_impl.h */,
+				DBEAD2F224F4ED3E00D6721F /* task_queue_impl.cpp */,
+				DB87718324FA41D900E00B3C /* task_manager.h */,
+				DB87718424FA41D900E00B3C /* task_manager.cpp */,
+				DB87718F24FE5AAF00E00B3C /* PendingTask.h */,
+				DB87719024FE5AAF00E00B3C /* PendingTask.cpp */,
+				DB87719224FF376D00E00B3C /* Location.h */,
+				DB87719324FF376D00E00B3C /* Location.cpp */,
+			);
+			path = task;
+			sourceTree = "<group>";
+		};
+		DB9E221324F366F100E48663 /* numerics */ = {
+			isa = PBXGroup;
+			children = (
+				DB9E221424F366F100E48663 /* clamped_math.h */,
+				DB9E221524F366F100E48663 /* ranges.h */,
+				DB9E221624F366F100E48663 /* math_constants.h */,
+				DB9E221724F366F100E48663 /* safe_math_clang_gcc_impl.h */,
+				DB9E221824F366F100E48663 /* safe_conversions_arm_impl.h */,
+				DB9E221924F366F100E48663 /* checked_math.h */,
+				DB9E221A24F366F100E48663 /* safe_math_arm_impl.h */,
+				DB9E221B24F366F100E48663 /* clamped_math_impl.h */,
+				DB9E221C24F366F100E48663 /* safe_conversions.h */,
+				DB9E221D24F366F100E48663 /* checked_math_impl.h */,
+				DB9E221E24F366F100E48663 /* safe_math.h */,
+				DB9E221F24F366F100E48663 /* safe_conversions_impl.h */,
+				DB9E222024F366F100E48663 /* safe_math_shared_impl.h */,
+			);
+			path = numerics;
+			sourceTree = "<group>";
+		};
+		DB9E222124F366F700E48663 /* log */ = {
+			isa = PBXGroup;
+			children = (
+				DB9E21DA24EE86AA00E48663 /* logging.cpp */,
+				DB9E21DC24EE86AA00E48663 /* logging.h */,
+			);
+			path = log;
+			sourceTree = "<group>";
+		};
+		DB9E222224F3670600E48663 /* string */ = {
+			isa = PBXGroup;
+			children = (
+				DB9E21DB24EE86AA00E48663 /* string_piece.h */,
+				DB9E21DD24EE86AA00E48663 /* string_piece.cpp */,
+				DB9E224024F36FF800E48663 /* string_format.h */,
+			);
+			path = string;
+			sourceTree = "<group>";
+		};
+		DB9E222324F36AFE00E48663 /* time */ = {
+			isa = PBXGroup;
+			children = (
+				DB9E224D24F3B51700E48663 /* needless */,
+				DB9E224224F3A37200E48663 /* mac */,
+				DB9E223E24F36B5A00E48663 /* time_delta.h */,
+				DB9E223D24F36B5A00E48663 /* time_delta.cc */,
+				DB9E222D24F36B1B00E48663 /* time_conversion_posix.cc */,
+				DB9E223224F36B1B00E48663 /* time_override.h */,
+				DB9E222824F36B1A00E48663 /* time_override.cc */,
+				DB9E222924F36B1A00E48663 /* time_to_iso8601.cc */,
+				DB9E222B24F36B1A00E48663 /* time_to_iso8601.h */,
+			);
+			path = time;
+			sourceTree = "<group>";
+		};
+		DB9E224224F3A37200E48663 /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				DB9E223324F36B1B00E48663 /* time_mac.cc */,
+			);
+			path = mac;
+			sourceTree = "<group>";
+		};
+		DB9E224824F3A3FC00E48663 /* memory */ = {
+			isa = PBXGroup;
+			children = (
+				DB9E224624F3A3C700E48663 /* scoped_policy.h */,
+				DB9E224B24F3B42400E48663 /* no_destructor.h */,
+				DB9E224924F3A42500E48663 /* mac */,
+			);
+			path = memory;
+			sourceTree = "<group>";
+		};
+		DB9E224924F3A42500E48663 /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				DB9E224424F3A3BE00E48663 /* scoped_typeref.h */,
+				DB9E224324F3A3A800E48663 /* scoped_cftyperef.h */,
+			);
+			path = mac;
+			sourceTree = "<group>";
+		};
+		DB9E224D24F3B51700E48663 /* needless */ = {
+			isa = PBXGroup;
+			children = (
+				DB9E223024F36B1B00E48663 /* clock.cc */,
+				DB9E222524F36B1A00E48663 /* clock.h */,
+				DB9E222C24F36B1A00E48663 /* default_clock.cc */,
+				DB9E222624F36B1A00E48663 /* default_clock.h */,
+				DB9E222724F36B1A00E48663 /* default_tick_clock.cc */,
+				DB9E222424F36B1A00E48663 /* default_tick_clock.h */,
+				DB9E222E24F36B1B00E48663 /* tick_clock.h */,
+				DB9E222A24F36B1A00E48663 /* tick_clock.cc */,
+			);
+			path = needless;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -157,11 +397,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB9E20E024E5475C00E48663 /* thread.h in Headers */,
-				DB9E210E24E6919F00E48663 /* build_config.h in Headers */,
-				DB9E20D624E546CC00E48663 /* Hive.h in Headers */,
-				DB9E20E524E62D3300E48663 /* platform_thread.h in Headers */,
-				DB9E210F24E691A500E48663 /* base_export.h in Headers */,
+				DB9E224724F3A3C700E48663 /* scoped_policy.h in Headers */,
+				DB9E224C24F3B42400E48663 /* no_destructor.h in Headers */,
+				DB9E224524F3A3BE00E48663 /* scoped_typeref.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,8 +531,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB9E20E624E62D3300E48663 /* platform_thread.cpp in Sources */,
-				DB9E20DF24E5475C00E48663 /* thread.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,10 +546,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB9E211E24E6978100E48663 /* ViewController.m in Sources */,
+				DB9E223F24F36B5A00E48663 /* time_delta.cc in Sources */,
+				DB9E21E924EE86AA00E48663 /* platform_thread.cpp in Sources */,
+				DB9E223624F36B1B00E48663 /* time_to_iso8601.cc in Sources */,
+				DB9E21E824EE86AA00E48663 /* thread_id_name_manager.cpp in Sources */,
+				DB9E223524F36B1B00E48663 /* time_override.cc in Sources */,
+				DB9E223924F36B1B00E48663 /* time_conversion_posix.cc in Sources */,
 				DB9E211824E6978100E48663 /* AppDelegate.m in Sources */,
+				DB87718E24FDF1AF00E00B3C /* MessagePumpCFRunLoopBase.mm in Sources */,
+				DB9E21EA24EE86AA00E48663 /* platform_thread_mac.mm in Sources */,
 				DB9E212924E6978300E48663 /* main.m in Sources */,
+				DB87718824FB949100E00B3C /* message_pump.cpp in Sources */,
+				DB87719124FE5AAF00E00B3C /* PendingTask.cpp in Sources */,
+				DB87718B24FBEA9D00E00B3C /* MessagePumpCFRunLoop.mm in Sources */,
+				DB87718524FA41D900E00B3C /* task_manager.cpp in Sources */,
 				DB9E211B24E6978100E48663 /* SceneDelegate.m in Sources */,
+				DB9E21EB24EE86AA00E48663 /* logging.cpp in Sources */,
+				DB87718224F9F9F000E00B3C /* thread_controller.cpp in Sources */,
+				DBEAD2F324F4ED3E00D6721F /* task_queue_impl.cpp in Sources */,
+				DB9E225024F3CB5000E48663 /* task_queue.cpp in Sources */,
+				DB9E21EF24EE86E600E48663 /* ViewController.mm in Sources */,
+				DB87719424FF376D00E00B3C /* Location.cpp in Sources */,
+				DB9E21F224EE88A400E48663 /* run_loop.cpp in Sources */,
+				DB9E21E724EE86AA00E48663 /* platform_thread_posix.cpp in Sources */,
+				DB9E21E624EE86AA00E48663 /* thread.cpp in Sources */,
+				DB9E21EC24EE86AA00E48663 /* string_piece.cpp in Sources */,
+				DB9E223C24F36B1B00E48663 /* time_mac.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +730,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Hive\"";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/HiveApp/Hive\"";
 				INFOPLIST_FILE = Hive/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -496,7 +754,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Hive\"";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/HiveApp/Hive\"";
 				INFOPLIST_FILE = Hive/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -551,6 +809,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B895ZJA588;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/HiveApp/Hive\"";
 				INFOPLIST_FILE = HiveApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -568,6 +827,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B895ZJA588;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/HiveApp/Hive\"";
 				INFOPLIST_FILE = HiveApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

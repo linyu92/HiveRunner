@@ -22,7 +22,7 @@ void Thread::ThreadMain() {
     
     m_id = PlatformThread::CurrentId();
     
-    m_id_sema.notify();
+    m_idSema.Notify();
     
     PlatformThread::SetName(m_name);
     
@@ -33,9 +33,11 @@ void Thread::ThreadMain() {
       m_running = true;
     }
 
-//    RunLoop run_loop;
-//    run_loop_ = &run_loop;
-//    Run(run_loop_);
+    m_startSema.Notify();
+    
+    RunLoop runLoop(m_threadController.get());
+    m_runLoop = &runLoop;
+    Run(m_runLoop);
  
     {
       std::unique_lock<std::mutex> lock(m_runningMutex);
@@ -43,7 +45,7 @@ void Thread::ThreadMain() {
     }
     
 //    task_environment_.reset();
-//    run_loop_ = nullptr;
+    m_runLoop = nullptr;
 }
 
 bool Thread::IsRunning() {
@@ -51,17 +53,50 @@ bool Thread::IsRunning() {
     return m_running;
 }
 
+void Thread::Run(RunLoop* runLoop) {
+  // Overridable protected method to be called from our |thread_| only.
+//    assert(<#e#>)
+//  DCHECK(id_event_.IsSignaled());
+//  DCHECK_EQ(id_, PlatformThread::CurrentId());
+  runLoop->Run();
+}
+
+bool Thread::WaitUntilThreadStarted() {
+    if (!m_threadController) {
+        return false;
+    }
+    m_startSema.Wait(false);
+    return true;
+}
+
+bool Thread::Stop() {
+    
+    std::unique_lock<std::mutex> lock(m_threadMutex);
+    
+    PlatformThread::Join(m_thread);
+    
+    return true;
+}
+
 bool Thread::Start() {
     LOG(INFO) << "thread start!!!";
-    m_messageLoop = std::unique_ptr<MessageLoop>(new MessageLoop());
-    std::unique_lock<std::mutex> lock(m_mutex);
+        
+    m_id = kInvalidThreadId;
+    m_idSema.Reset();
+        
+    m_threadController = std::make_unique<ThreadController>();
+    m_startSema.Reset();
+        
+    std::unique_lock<std::mutex> lock(m_threadMutex);
     bool success = PlatformThread::CreateWithPriority(0, this, &m_thread, ThreadPriority::NORMAL);
     DCHECK(success);
     return success;
 }
 
+
+
 PlatformThreadId Thread::GetThreadId() {
-    m_id_sema.wait(false);
+    m_idSema.Wait(false);
     return m_id;
 }
 

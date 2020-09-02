@@ -16,8 +16,10 @@
 
 #include <mutex>
 #include "platform_thread.h"
-#include "message_loop.h"
 #include "semaphore.h"
+#include "run_loop.h"
+#include "thread_controller.h"
+
 
 namespace hive {
 
@@ -29,24 +31,33 @@ public:
     ~Thread() override;
     
     bool Start();
-    
+    bool Stop();
     PlatformThreadId GetThreadId();
         
     bool IsRunning();
-        
+    
+    bool WaitUntilThreadStarted();
+    
 private:
     // PlatformThread::Delegate
     void ThreadMain() override;
     
+    
+private:
+    void Run(RunLoop* run_loop);
 private:
     const std::string m_name;
-    std::mutex m_mutex;
-    std::unique_ptr<MessageLoop> m_messageLoop;
+    std::mutex m_threadMutex;
     PlatformThreadHandle m_thread;
     PlatformThreadId m_id = kInvalidThreadId;
     std::mutex m_runningMutex;
     bool m_running;
-    Semaphore m_id_sema;
+    Semaphore m_idSema;
+    Semaphore m_startSema;
+    
+    
+    RunLoop* m_runLoop = nullptr;
+    std::unique_ptr<ThreadController> m_threadController;
 };
 
 }; // hive
